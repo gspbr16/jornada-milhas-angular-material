@@ -1,59 +1,83 @@
-# JornadaMilhas
+Projeto desenvolvido com [Angular](https://angular.dev/) e [Angular Material](https://material.angular.io/) para simular uma plataforma de compartilhamento e venda de milhas aéreas.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+## Funcionalidades
 
-## Development server
+- Layout responsivo utilizando Angular Material.
+- Banner ilustrativo e cabeçalho com navegação.
+- Formulário para busca de passagens aéreas.
+- Estilização customizada com SCSS.
+- Testes unitários com Jasmine e Karma.
 
-To start a local development server, run:
+## Estrutura do Projeto
 
-```bash
-ng serve
+```
+src/
+  ├── app/
+  │   ├── banner/
+  │   ├── form-busca-passagens/
+  │   ├── header/
+  │   ├── app.component.ts
+  │   ├── app.component.html
+  │   ├── app.component.scss
+  │   └── app.config.ts
+  ├── index.html
+  ├── main.ts
+  ├── styles.scss
+  ├── reset.scss
+  └── _theme-colors.scss
+public/
+  └── images/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Pré-requisitos
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/) (versão recomendada: 18+)
+- [Angular CLI](https://angular.dev/tools/cli) (versão recomendada: 19+)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Instalação
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Clone o repositório e instale as dependências:
 
 ```bash
-ng generate --help
+git clone https://github.com/seu-usuario/jornada-milhas.git
+cd jornada-milhas
+npm install
 ```
 
-## Building
+## Como rodar o projeto
 
-To build the project run:
+Para iniciar o servidor de desenvolvimento:
 
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Acesse [http://localhost:4200](http://localhost:4200) no navegador.
 
-## Running unit tests
+## Como rodar os testes
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Execute os testes unitários:
 
 ```bash
-ng test
+npm test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## Como gerar build de produção
 
 ```bash
-ng e2e
+npm run build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Os arquivos serão gerados na pasta `dist/jornada-milhas`.
 
-## Additional Resources
+## Personalização
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- As cores do tema estão em [`src/_theme-colors.scss`](src/_theme-colors.scss).
+- Os estilos globais estão em [`src/styles.scss`](src/styles.scss) e [`src/reset.scss`](src/reset.scss).
+- Os componentes principais estão em [`src/app`](src/app).
+
+## Estrutura dos Componentes
+
+- [`HeaderComponent`](src/app/header/header.component.ts): Cabeçalho com navegação e botões.
+- [`BannerComponent`](src/app/banner/banner.component.ts): Banner ilustrativo.
+- [`FormBuscaPassagensComponent`](src/app/form-busca-passagens/form-busca-passagens.component.ts): Formulário de busca de passagens.
